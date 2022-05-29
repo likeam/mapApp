@@ -60,6 +60,9 @@ if(navigator.geolocation)
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
+    // CLEAR INPUT FIELDS
+    inputDistance = inputCadence = inputDuration = inputElevation = "";
+
         // DISPLAY MARKER
         console.log(mapEvent);
             const {lat, lng} = mapEvent.latlng;
