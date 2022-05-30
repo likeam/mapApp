@@ -61,7 +61,7 @@ form.addEventListener('submit', function(e) {
     e.preventDefault();
 
     // CLEAR INPUT FIELDS
-    inputDistance = inputCadence = inputDuration = inputElevation = "";
+    inputDistance.value = inputCadence.value =  inputDuration.value =  inputElevation.value = '';
 
         // DISPLAY MARKER
         console.log(mapEvent);
@@ -75,4 +75,9 @@ form.addEventListener('submit', function(e) {
                 className: 'running-popup',
                 
             })).setPopupContent('Workout').openPopup();
+});
+
+inputType.addEventListener('change', function(){
+    inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
+    inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
 });
